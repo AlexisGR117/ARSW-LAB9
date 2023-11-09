@@ -48,15 +48,25 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
     * 1000000
+![Parte1-7A.png](images/part1/Parte1-7A.png)
     * 1010000
+![Parte1-7B.png](images/part1/Parte1-7B.png)
     * 1020000
+![Parte1-7C.png](images/part1/Parte1-7C.png)
     * 1030000
+![Parte1-7D.png](images/part1/Parte1-7D.png)
     * 1040000
+![Parte1-7E.png](images/part1/Parte1-7E.png)
     * 1050000
+![Parte1-7F.png](images/part1/Parte1-7F.png)
     * 1060000
+![Parte1-7G.png](images/part1/Parte1-7G.png)
     * 1070000
+![Parte1-7H.png](images/part1/Parte1-7H.png)
     * 1080000
+![Parte1-7I.png](images/part1/Parte1-7I.png)
     * 1090000    
+![Parte1-7J.png](images/part1/Parte1-7J.png)
 
 8. Dírijase ahora a Azure y verifique el consumo de CPU para la VM. (Los resultados pueden tardar 5 minutos en aparecer).
 
@@ -78,19 +88,62 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 ![Imágen 3](images/part1/part1-vm-resize.png)
 
 11. Una vez el cambio se vea reflejado, repita el paso 7, 8 y 9.
+
+* 1010000
+  ![Parte1-7A.png](images/part1/Parte1-11A.png)
+* 1010000
+  ![Parte1-7B.png](images/part1/Parte1-11B.png)
+* 1020000
+  ![Parte1-7C.png](images/part1/Parte1-11C.png)
+* 1030000
+  ![Parte1-7D.png](images/part1/Parte1-11D.png)
+* 1040000
+  ![Parte1-7E.png](images/part1/Parte1-11E.png)
+* 1050000
+  ![Parte1-7F.png](images/part1/Parte1-11F.png)
+* 1060000
+  ![Parte1-7G.png](images/part1/Parte1-11G.png)
+* 1070000
+  ![Parte1-7H.png](images/part1/Parte1-11H.png)
+* 1080000
+  ![Parte1-7I.png](images/part1/Parte1-11I.png)
+* 1090000    
+  ![Parte1-7J.png](images/part1/Parte1-11J.png)
+
 12. Evalue el escenario de calidad asociado al requerimiento no funcional de escalabilidad y concluya si usando este modelo de escalabilidad logramos cumplirlo.
 13. Vuelva a dejar la VM en el tamaño inicial para evitar cobros adicionales.
 
 **Preguntas**
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
+
 2. ¿Brevemente describa para qué sirve cada recurso?
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
-6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
-    * Tiempos de ejecución de cada petición.
-    * Si hubo fallos documentelos y explique.
+
+* Tamaños B1ls
+
+![Parte1-8.png](images/part1/Parte1-8.png)
+
+* Tamaños B2ms
+
+![Parte1-11K.png](images/part1/Parte1-11K.png)
+
+7. Adjunte la imagen del resumen de la ejecución de Postman. 
+
+* Tamaños B1ls
+
+![Parte1-P7.png](images/part1/Parte1-P7A.png)
+
+* Tamaños B2ms
+
+![Parte1-P7B.png](images/part1/Parte1-P7B.png)
+
+Interprete:
+* Tiempos de ejecución de cada petición.
+* Si hubo fallos documentelos y explique.
+   
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
 9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
